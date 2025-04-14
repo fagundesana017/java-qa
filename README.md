@@ -25,12 +25,12 @@ Testar o comportamento interno das classes de serviço (`Service`) com conhecime
 
 ### Problema Encontrado
 - Erro no método `getEmail()`, que estava inexistente no Service `AutenticacaoService`.
-- Erro no metodo `getPassword()`, que estava inexistente no Service `UserService`.
+- Erro no metodo `setPassword()`, que estava inexistente no Service `UserService`.
 - Erro no método `getId()`, que estava inexistente do Service `TokenService`
 
 ### Ação Realizada
 - Criação e implementação do método `getEmail()` para solucionar o erro e permitir o funcionamento correto .
-- Criação e implementação do método `getPassword()` para solucionar o erro e permitir o funcionamento correto .
+- Criação e implementação do método `setPassword()` para solucionar o erro e permitir o funcionamento correto .
 - Criação e implementação do método `getId()` para solucionar o erro e permitir o correto funcionamento da autenticação.
 
 ## Conclusão
