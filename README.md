@@ -18,8 +18,6 @@ Testar o fluxo de cadastro de usuário via Swagger sem conhecer o código do sis
   - Corrigida a connection string para conectar com o banco de dados *cleberleao_oficina* (a instância do banco de dados e o nome do servidor.).
   - Corrigido o nome do usuario do banco de dados.
 
----
-
 ## 2. Testes de Caixa Branca
 
 ### Objetivo
@@ -36,8 +34,6 @@ Testar o comportamento interno das classes de serviço (`Service`) com conhecime
 - Criação e implementação do método `getEmail()` para solucionar o erro e permitir o funcionamento correto .
 - Criação e implementação do método `getPassword()` para solucionar o erro e permitir o funcionamento correto .
 - Criação e implementação do método `getId()` para solucionar o erro e permitir o correto funcionamento da autenticação.
-
----
 
 ## Conclusão
 
