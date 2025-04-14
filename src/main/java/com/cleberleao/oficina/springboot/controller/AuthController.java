@@ -38,7 +38,7 @@ public class AuthController {
 		try {
 			Authentication authentication = authManager.authenticate(dadosLogin);
 			String token = tokenService.gerarToken(authentication);
-			Long id =tokenService.getIdUsuario(token);
+			Long id = tokenService.getIdUsuario(token);
 			String roles ="ADMIN";
 			return ResponseEntity.ok(new TokenDto(token, "Bearer", roles));
 		} catch (AuthenticationException var5) {

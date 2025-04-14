@@ -23,17 +23,22 @@ import java.util.Collection;
  * @author CleberLeão
  */
 @NoArgsConstructor
-@AllArgsConstructor
 public class AutenticacaoViaTokenFilter extends OncePerRequestFilter {
 	@Autowired
 	private TokenService tokenService;
 	@Autowired
 	private UserRepository repository;
 
+	public AutenticacaoViaTokenFilter(TokenService tokenService, UserRepository userRepository) {
+		this.tokenService = tokenService;
+		this.repository = userRepository;
+	}
+
+
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 		String token = this.recuperarToken(request);
-		boolean valido = this.tokenService.tokenEhValido(token);
+		boolean valido = tokenService.tokenEhValido(token);
 		if (valido) {
 			this.autenticarCliente(token);
 		}
@@ -53,4 +58,5 @@ public class AutenticacaoViaTokenFilter extends OncePerRequestFilter {
 		String token = request.getHeader("Authorization");
 		return token != null && !token.isEmpty() && token.startsWith("Bearer ") ? token.substring(7, token.length()) : null;
 	}
+
 }

@@ -55,14 +55,16 @@ public class User implements Serializable, UserDetails {
         return null;
     }
 
+    public Long getId(){ return  this.id; }
     @Override
     public String getPassword() {
         return this.password;
     }
     @Override
     public String getUsername() {
-        return this.email;
+        return this.nome;
     }
+    public String getEmail() {return this.email;}
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -79,4 +81,9 @@ public class User implements Serializable, UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
 }
