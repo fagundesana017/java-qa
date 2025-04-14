@@ -23,8 +23,6 @@ Testar o fluxo de cadastro de usuário via Swagger sem conhecer o código do sis
 ### Objetivo
 Testar o comportamento interno das classes de serviço (`Service`) com conhecimento do código-fonte.
 
-### Classe Testada: `AutenticacaoService`
-
 ### Problema Encontrado
 - Erro no método `getEmail()`, que estava inexistente no Service `AutenticacaoService`.
 - Erro no metodo `getPassword()`, que estava inexistente no Service `UserService`.
